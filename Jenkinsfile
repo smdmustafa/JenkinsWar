@@ -26,9 +26,5 @@ node{
    stage('Deploy to Tomcat'){
      bat "copy target\\JenkinsWar.war \"${tomcatWeb}\\JenkinsWar.war\""
    }
-      stage ('Start Tomcat Server') {
-         sleep(time:5,unit:"SECONDS") 
-         bat "${tomcatBin}\\startup.bat"
-         sleep(time:100,unit:"SECONDS")
-   }
+      
 }
